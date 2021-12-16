@@ -7,6 +7,9 @@ TagManager:
   - DontPickUp
   - PickUp
   - DeathBox
+  - MainMenu
+  - OptionsMenu
+  - LevelSelect
   layers:
   - Default
   - TransparentFX
