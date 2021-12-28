@@ -1,1 +1,3 @@
 Skybox Series Free - Avionx - Unity Asset Store
+https://gamedevplanet.com/how-to-quit-the-game-in-unity-proper-ways-to-close-a-game/
+https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.Button-onClick.html
