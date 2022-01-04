@@ -12,19 +12,23 @@ public class PlayerController : MonoBehaviour
 		VICTORY,
 		STATES
   }
-
-	public float speed;
-  public Rigidbody orientation;
-  public Rigidbody spawnPoint;
-	public Rigidbody rb;
-	public float maxSpeed;
+	[HideInInspector]
 	public STATE currentState;
+	[HideInInspector]
+	public Rigidbody rb;
+	[HideInInspector]
 	public Vector3 floorNormal;
 
+	public float maxSpeed;
 	
-	private LayerMask whatIsGround;
+	[SerializeField]
 	private float groundCheckRadius;
+	[SerializeField]
 	private float moveForce;
+	[SerializeField]
+	private LayerMask whatIsGround;
+	
+	
 	void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody> ();
@@ -72,7 +76,7 @@ public class PlayerController : MonoBehaviour
     }
   }
   
-	void OnTriggerEnter(Collider other) 
+	/*void OnTriggerEnter(Collider other) 
 	{
 		if (other.gameObject.tag == "PickUp")
 		{
@@ -86,7 +90,7 @@ public class PlayerController : MonoBehaviour
 		{
 			rb.transform.position = spawnPoint.position;
 		}
-	}
+	}*/
 
 	public bool OnGround()
   {

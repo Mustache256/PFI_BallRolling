@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour 
 {
+	
+
 	private Transform mainCamera;
 
 	private PlayerController player;
@@ -10,11 +12,17 @@ public class CameraController : MonoBehaviour
 	private float initialXRotation;
 	private float horizontalTilt;
 	private float verticalTilt;
+
+	[SerializeField]
 	private float maxVerticalAngle;
+	[SerializeField]
 	private float maxHorizontalAngle;
+	[SerializeField]
 	private float tiltSpeed;
+	[SerializeField]
 	private float offset;
 
+	[SerializeField]
 	private bool useFloorNormal;
 
 	void Start () 

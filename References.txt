@@ -1,3 +1,6 @@
 Skybox Series Free - Avionx - Unity Asset Store
-https://gamedevplanet.com/how-to-quit-the-game-in-unity-proper-ways-to-close-a-game/
-https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.Button-onClick.html
+Forceling World Space Grid - Forceling - Unity Asset Store
+https://gamedevplanet.com/how-to-quit-the-game-in-unity-proper-ways-to-close-a-game/ - Closing the application - GameDevPlanet
+https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.Button-onClick.html - OnClick function for UI elements - Unity Documentation
+https://docs.unity3d.com/ScriptReference/Windows.Speech.DictationRecognizer.html - Speech Dictation for use in speech recognition elements of the game - Unity Documentation
+https://www.youtube.com/watch?v=v4hkSYq--Jk&ab_channel=Grego - Basis for camera and player movement - Grego - Youtube
