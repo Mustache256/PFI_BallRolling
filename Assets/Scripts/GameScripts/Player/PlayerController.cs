@@ -46,11 +46,6 @@ public class PlayerController : MonoBehaviour
     }
 	}
 
-  private void Update()
-  {
-		
-  }
-
   public void Move(float verticalTilt, float horizontalTilt, Vector3 right)
   {
 		if (OnGround())
@@ -106,22 +101,4 @@ public class PlayerController : MonoBehaviour
 			floorNormal = hit.normal;
     }
   }
-	
-	/*void Update()
-	{
-
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-
-		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-		rb.AddForce(movement * speed * Time.deltaTime);
-
-		if (rb.velocity.magnitude > maxSpeed)
-		{
-			rb.velocity = rb.velocity.normalized * maxSpeed;
-		}
-
-		orientation.transform.position = rb.position;
-	}*/
 }

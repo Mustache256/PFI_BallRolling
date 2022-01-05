@@ -8,7 +8,7 @@ public class SceneManagement : MonoBehaviour
   public void tutorialScene()
   {
     Debug.Log("Tutorial Scene Loaded");
-    SceneManager.LoadScene("MiniGame");
+    SceneManager.LoadScene("TutorialLevel");
   }
   public void level1Scene()
   {
