@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 	public Vector3 floorNormal;
 
 	public float maxSpeed;
-	
+
 	[SerializeField]
 	private float groundCheckRadius;
 	[SerializeField]
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
   {
 		switch (currentState)
     {
-			case STATE.VICTORY:
+			case STATE.VICTORY:		
 				break;
     }
 	}

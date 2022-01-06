@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MovementTutorialScript : MonoBehaviour
 {
-  public GameObject MovementTutorialCanvas;
+  public GameObject movementTutorialCanvas;
+  public GameObject uiCanvas;
   private void OnTriggerEnter(Collider other)
   {
     if(other.gameObject.tag == "Player")
     {
       Debug.Log("Showing Movement tutorial");
-      MovementTutorialCanvas.SetActive(true);
+      movementTutorialCanvas.SetActive(true);
+      uiCanvas.SetActive(false);
       Time.timeScale = 0f;
     }
   }
   public void CloseTutorial()
   {
     Debug.Log("Hiding Movement tutorial");
-    MovementTutorialCanvas.SetActive(false);
+    movementTutorialCanvas.SetActive(false);
+    uiCanvas.SetActive(true);
     Time.timeScale = 1f;
   }
 }

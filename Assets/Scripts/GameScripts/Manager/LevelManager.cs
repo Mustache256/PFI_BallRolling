@@ -31,10 +31,15 @@ public class LevelManager : MonoBehaviour
       PauseGame();
     }
   }
-  public void returnToMenu()
+  public void ReturnToMenu()
   {
     SceneManager.LoadScene("MainMenu");
     Debug.Log("Main menu Scene Loaded");
+  }
+  public void LoadNextLevel()
+  {
+    SceneManager.LoadScene("Level1");
+    Debug.Log("Level 1 Scene Loaded");
   }
   public void ButtonPress()
   {
