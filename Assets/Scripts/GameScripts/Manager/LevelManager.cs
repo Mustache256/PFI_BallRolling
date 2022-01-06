@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
   public static bool gameIsPaused;
   public GameObject pauseMenuCanvas;
-  private PlayerController player;
-  private CameraController mainCamera;
+  public GameObject uiCanvas;
+  [SerializeField]
+  private Text scoreText;
+  [SerializeField]
+  private int score;
   // Start is called before the first frame update
   void Start()
   {
     gameIsPaused = false;
     Time.timeScale = 1f;
-    player = FindObjectOfType<PlayerController>();
-    mainCamera = FindObjectOfType<CameraController>();
+    score = 0;
+    scoreText.text = "Score: " + 0;
   }
 
   // Update is called once per frame
@@ -43,6 +47,7 @@ public class LevelManager : MonoBehaviour
     {
       Debug.Log("Game Paused");
       pauseMenuCanvas.SetActive(true);
+      uiCanvas.SetActive(false);
       Time.timeScale = 0f;
     }
     else
@@ -55,11 +60,18 @@ public class LevelManager : MonoBehaviour
     if (!gameIsPaused)
     {
       Debug.Log("Game unpaused");
+      uiCanvas.SetActive(true);
       Time.timeScale = 1f;
     }
     else
     {
       Debug.Log("Error with exiting Pause Menu occured");
     }
+  }
+
+  public void setScore(int scoreToAdd)
+  {
+    score += scoreToAdd;
+    scoreText.text = "Score: " + score.ToString();
   }
 }

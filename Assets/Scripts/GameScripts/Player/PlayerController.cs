@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
 
   void FixedUpdate()
   {
-		Debug.Log("Player Current State: " + currentState);
 		switch (currentState)
     {
 			case STATE.VICTORY:
@@ -71,22 +70,6 @@ public class PlayerController : MonoBehaviour
     }
   }
   
-	/*void OnTriggerEnter(Collider other) 
-	{
-		if (other.gameObject.tag == "PickUp")
-		{
-			other.gameObject.SetActive(false);
-		}
-		else if (other.gameObject.tag == "DontPickUp")
-		{
-			other.gameObject.SetActive(false);
-		}
-		else if (other.gameObject.tag == "DeathBox")
-		{
-			rb.transform.position = spawnPoint.position;
-		}
-	}*/
-
 	public bool OnGround()
   {
 	  return Physics.CheckSphere(transform.position - (Vector3.up * 0.5f), groundCheckRadius, whatIsGround);
