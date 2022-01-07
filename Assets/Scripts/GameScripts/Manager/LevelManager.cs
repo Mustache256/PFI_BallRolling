@@ -3,29 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+//Function used to manage aspects that are universal to all levels of the game
 public class LevelManager : MonoBehaviour
 {
+  //Boolean used to store game pause state
   public static bool gameIsPaused;
+  //Variable used to store reference to the pause menu canvas
   public GameObject pauseMenuCanvas;
+  //Variable used to store the height in the level below which the player will die
   public Transform deathHeight;
-
+  //Vairable used to store the name of the current scene
   private string sceneCheck;
+  //Variable used to store reference to the player object
   private PlayerController player;
+  //Forcing private variable to be visible in the inspector
   [SerializeField]
+  //Variable used to store GUI element that shows player score
   private Text scoreText;
+  //Forcing private variable to be visible in the inspector
   [SerializeField]
+  //Variable used to store GUI element that shows player's final score at the end of the level
   private Text finalScore;
-  //[SerializeField]
+  //Variable used to store player score
   private int score;
-  // Start is called before the first frame update
+  //Function used for setup on loading a scene
   void Start()
   {
+    //Retrieving player object
     player = FindObjectOfType<PlayerController>();
+    //Set pause tracking bool to false
     gameIsPaused = false;
+    //Setting time to run by default on load
     Time.timeScale = 1f;
+    //Setting score to 0 on load
     score = 0;
+    //Setting GUI text showing score to show 0 on load
     scoreText.text = "Score: " + 0;
+    //Retrieving the name of the current active scene to store in associated variable
     sceneCheck = SceneManager.GetActiveScene().name;
   }
 
