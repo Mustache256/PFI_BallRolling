@@ -75,7 +75,7 @@ public class Timer : MonoBehaviour
         //Updating timeout final time canvas text
         finalTimeOut.text = timeRemaining.ToString("f2");
         //Retrieving player score and storing it
-        score = sceneManager.GetComponent<LevelManager>().getScore();
+        score = sceneManager.GetComponent<Score>().getScore();
         //Updating timeout final score canvas text
         finalScoreOut.text = score.ToString();
         //Set timer running bool to false

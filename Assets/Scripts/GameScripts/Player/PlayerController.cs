@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 		DEAD,
 		STATES
   }
+	public GameObject sceneManager;
 	//Hiding public variable from inspector
 	[HideInInspector]
 	//Variable used to store player state
@@ -97,5 +98,19 @@ public class PlayerController : MonoBehaviour
 			//Setting the floor normal have the same properties as the cast ray
 			floorNormal = hit.normal;
     }
+  }
+	//Function that detects collision with other objects (used to detect item pickups)
+	private void OnTriggerEnter(Collider other)
+  {
+		//Ckeck to see if other item tag is pickup
+		if (other.gameObject.tag == "PickUp")
+		{
+			//Adding 1 to the score when the pickup is collected by the player
+			sceneManager.GetComponent<Score>().setScore(1);
+			//Output to console for debugging
+			Debug.Log("Pickup Collected");
+			//Destroying the pickup as it is collected by the player
+			Destroy(other.gameObject);
+		}
   }
 }

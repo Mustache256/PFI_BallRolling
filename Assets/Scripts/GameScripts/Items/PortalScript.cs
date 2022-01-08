@@ -8,7 +8,7 @@ public class PortalScript : MonoBehaviour
   public GameObject victoryCanvas;
   //Variable that stores the speed at which the player is pulled into the portal
   public float speed = 5;
-  //Varaibel that stores teh position of the center of the portal
+  //Varaibel that stores the position of the center of the portal
   public Transform portal;
   //Variable that stores the player object
   public GameObject player;
@@ -26,7 +26,7 @@ public class PortalScript : MonoBehaviour
     //Checking to see if player needs to move
     if(moveCheck == true)
     {
-      //Calling paleyr move function
+      //Calling player move function
       playerMove();
     }
   }
@@ -57,7 +57,7 @@ public class PortalScript : MonoBehaviour
       //Translate function to move the player to the center of the portal
       player.transform.Translate((travelDirection.x * speed * Time.deltaTime), (travelDirection.y * speed * Time.deltaTime), (travelDirection.z * speed * Time.deltaTime), Space.World);
     }
-    //Esle statement to end teh level if player is in the center of the portal
+    //Else statement to end the level if player is in the center of the portal
     else
     {
       //Setting move check to false

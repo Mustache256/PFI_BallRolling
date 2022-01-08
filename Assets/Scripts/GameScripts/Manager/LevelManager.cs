@@ -16,16 +16,6 @@ public class LevelManager : MonoBehaviour
   private string sceneCheck;
   //Variable used to store reference to the player object
   private PlayerController player;
-  //Forcing private variable to be visible in the inspector
-  [SerializeField]
-  //Variable used to store GUI element that shows player score
-  private Text scoreText;
-  //Forcing private variable to be visible in the inspector
-  [SerializeField]
-  //Variable used to store GUI element that shows player's final score at the end of the level
-  private Text finalScore;
-  //Variable used to store player score
-  private int score;
   //Function used for setup on loading a scene
   void Start()
   {
@@ -35,10 +25,6 @@ public class LevelManager : MonoBehaviour
     gameIsPaused = false;
     //Setting time to run by default on load
     Time.timeScale = 1f;
-    //Setting score to 0 on load
-    score = 0;
-    //Setting GUI text showing score to show 0 on load
-    scoreText.text = "Score: " + 0;
     //Retrieving the name of the current active scene to store in associated variable
     sceneCheck = SceneManager.GetActiveScene().name;
   }
@@ -173,21 +159,5 @@ public class LevelManager : MonoBehaviour
       //Output to console for debugging
       Debug.Log("Error with exiting Pause Menu occured");
     }
-  }
-  //Function used to set the current score the player has
-  public void setScore(int scoreToAdd)
-  {
-    //Adding to score based off of input variable into funciton
-    score += scoreToAdd;
-    //Showing curren tscore within GUI
-    scoreText.text = "Score: " + score.ToString();
-    //Changing final score text on victory screen
-    finalScore.text = score.ToString();
-  }
-  //Function to get current player score
-  public int getScore()
-  {
-    //Returns Current Score
-    return score;
   }
 }
