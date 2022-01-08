@@ -3,8 +3,6 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour 
 {
-	
-
 	private Transform mainCamera;
 
 	private PlayerController player;

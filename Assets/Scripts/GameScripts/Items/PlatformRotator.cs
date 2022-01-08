@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlatformRotator : MonoBehaviour
 {
-    // Update is called once per frame
+    //Simple script that rotates a level platform
     void Update()
     {
+    //Rotates platform around its y axis continually
     transform.Rotate(new Vector3(0, 15, 0) * Time.deltaTime);
     }
 }
