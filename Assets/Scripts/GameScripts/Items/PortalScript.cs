@@ -20,6 +20,14 @@ public class PortalScript : MonoBehaviour
   private Vector3 travelDirection;
   //Variable that stores whether or not the player need to move
   private bool moveCheck = false;
+  //Variable that stores the sound that plays when the player enters the portal
+  private AudioSource endLevel;
+  //Function used for setup on loading a scene
+  private void Start()
+  {
+    //Retrieving the audiosource component from the object and storing it
+    endLevel = gameObject.GetComponent<AudioSource>();
+  }
   //Function called every frame
   private void Update()
   {
@@ -64,6 +72,8 @@ public class PortalScript : MonoBehaviour
       moveCheck = false;
       //Displaying the victoy canvas to the player
       victoryCanvas.SetActive(true);
+      //Plays portal entry sound
+      endLevel.Play(0);
       //Output to cansole for debugging
       Debug.Log("Level Complete");
       //Pausing the scene as the level has ended

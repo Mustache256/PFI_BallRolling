@@ -40,13 +40,17 @@ public class PlayerController : MonoBehaviour
 	private float moveForce;
 	//Forcing private variable to appear in inspector
 	[SerializeField]
+	//Variable that stores the name of the layer that the game's ground is within
 	private LayerMask whatIsGround;
+	//Variable that stores SFX audio for pickup sounds
+	private AudioSource pickup;
 	
 	//Function used for setup on loading a scene
 	void Start()
 	{
 		//Retrieving rigidbody component from player
-		rb = gameObject.GetComponent<Rigidbody> ();
+		rb = gameObject.GetComponent<Rigidbody>();
+		pickup = gameObject.GetComponent<AudioSource>();
 		//Setting player state to WAIT
 		currentState = STATE.WAIT;
 	}
@@ -109,6 +113,8 @@ public class PlayerController : MonoBehaviour
 			sceneManager.GetComponent<Score>().setScore(1);
 			//Output to console for debugging
 			Debug.Log("Pickup Collected");
+			//Plays the SFX sound for item pickups
+			pickup.Play(0);
 			//Destroying the pickup as it is collected by the player
 			Destroy(other.gameObject);
 		}

@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour
     switch(sceneCheck)
     {
       //Case to load from tutorial to level 1
-      case "Tutoriallevel":
+      case "TutorialLevel":
         SceneManager.LoadScene("Level1");
         //Output to console for debugging
         Debug.Log("Level 1 Scene Loaded");

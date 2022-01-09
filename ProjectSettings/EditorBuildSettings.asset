@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MainMenu.unity
     guid: 45256cb5c692b2d4988bfce4a9874dcb
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/MiniGame.unity
     guid: a7fd4ec1132d44b2683aaf5514f770e3
   - enabled: 1
