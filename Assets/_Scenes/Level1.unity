@@ -2994,6 +2994,11 @@ PrefabInstance:
       propertyPath: endLevel
       value: 
       objectReference: {fileID: 2136470984}
+    - target: {fileID: 6708332200204203528, guid: 3be38843d9035d54f9165cdb7b710854,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6708332200296852164, guid: 3be38843d9035d54f9165cdb7b710854,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -3318,6 +3323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708332201792962780, guid: 3be38843d9035d54f9165cdb7b710854,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6708332202273527858, guid: 3be38843d9035d54f9165cdb7b710854,
         type: 3}
